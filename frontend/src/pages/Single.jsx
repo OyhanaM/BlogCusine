@@ -1,9 +1,9 @@
 import Layout from "../components/Layout";
 
-export default function Home() {
+export default function Single() {
   return (
     <Layout>
-      <h2>Hello</h2>
+      <h2>Single</h2>
     </Layout>
   );
 }

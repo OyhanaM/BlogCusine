@@ -1,9 +1,9 @@
 import Layout from "../components/Layout";
 
-export default function Home() {
+export default function Register() {
   return (
     <Layout>
-      <h2>Hello</h2>
+      <h2>Register</h2>
     </Layout>
   );
 }
