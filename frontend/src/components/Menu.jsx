@@ -1,8 +1,5 @@
-import { Link } from "react-router-dom";
-import Layout from "../components/Layout";
-
-export default function Home() {
-  const article = [
+function Menu() {
+  const articles = [
     {
       id: 1,
       title: "Lorem nam",
@@ -32,39 +29,31 @@ export default function Home() {
       image: "/assets/images/cupcakes.jpg",
     },
   ];
-
   return (
-    <Layout>
-      <div className="home">
-        <div className="flex flex-col my-12 gap-20 flex-wrap items-center mx-auto w-full max-w-screen-xl">
-          {article.map((articles) => (
-            <div className="articles" key={articles.id}>
-              <div className="imageArticle">
-                <img src={articles.image} alt={articles.title} />
-                <div className="w-full h-full bg-peach absolute top-5 -left-5 -z-10" />
-              </div>
-              <div className="content">
-                <Link to={`/post/${articles.id}`}>
-                  <h3 className="font-londrina font-black text-green text-3xl">
-                    {articles.title}
-                  </h3>
-                </Link>
-                <p className="font-montserrat text-darkbrown text-lg">
-                  {articles.description}
-                </p>
-                <Link to={`/post/${articles.id}`}>
-                  <button
-                    type="button"
-                    className=" border border-green font-londrina text-green max-w-max p-2 rounded-md hover:border-white hover:bg-peach hover:text-green"
-                  >
-                    Voir la recette
-                  </button>
-                </Link>
-              </div>
-            </div>
-          ))}
+    <div className="menuReceipe">
+      <h2 className="font-londrina text-brown text-xl">
+        VOUS POURRIEZ AUSSI AIMER:
+      </h2>
+      {articles.map((article) => (
+        <div key={article.id}>
+          <img
+            className="mt-2 w-full h-52 object-cover"
+            src={article.image}
+            alt={article.title}
+          />
+          <h3 className="font-londrina text-green text-xl mt-2">
+            {article.title}
+          </h3>
+          <button
+            className=" border border-peach font-londrina text-darkbrown max-w-max p-2 rounded-md hover:border-white hover:bg-peach hover:text-darkbrown mt-2 mx-auto"
+            type="button"
+          >
+            Voir la recette
+          </button>
         </div>
-      </div>
-    </Layout>
+      ))}
+    </div>
   );
 }
+
+export default Menu;
