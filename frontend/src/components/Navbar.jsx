@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <div className="bg-beige flex justify-between px-5">
-      <img
-        className="h-16"
-        src="/assets/logo/logo.png"
-        alt="logo Milkees baking club"
-      />
+      <Link to="/">
+        {" "}
+        <img
+          className="h-16"
+          src="/assets/logo/logo.png"
+          alt="logo Milkees baking club"
+        />
+      </Link>
       <ul className="flex justify-center items-center gap-6 font-montserrat font-light text-md text-darkbrown">
-        <Link to="/?cat=apropos">
-          <li>A PROPOS</li>
-        </Link>
         <Link to="/?cat=sucrees">
           <li>RECETTES SUCREES</li>
         </Link>
