@@ -2,13 +2,21 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        montserrat: ["Montserrat, sans serif"],
+        londrina: ["Londrina, sans serif"],
+      },
+    },
     colors: {
-      pink: "#fff1f1",
+      beige: "#FFF0DC",
       white: "#ffffff",
-      grey: "#d9d9d9",
-      green: "#00561b",
-      darkgrey: "#737373",
+      grey: "#e0e3d7",
+      brown: "#de7833",
+      green: "#44694c",
+      peach: "#fdd29b",
+      yellow: "#fcbe2e",
+      darkbrown: "#86471C",
     },
   },
   plugins: [],

@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function Register() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-pink">
-      <h2 className="mb-5 text-2xl text-green">Créer un compte</h2>
+    <div className="flex flex-col items-center justify-center h-screen bg-beige">
+      <h2 className="mb-5 text-2xl text-green font-londrina font-black">
+        Créer un compte
+      </h2>
       <form className="flex flex-col items-center gap-5 bg-white rounded-lg w-72 p-5">
         <input
           required
@@ -27,11 +29,14 @@ export default function Register() {
 
         <button
           type="submit"
-          className="bg-green text-white p-2 cursor-pointer rounded-lg mt-2"
+          className="bg-green text-white p-2 cursor-pointer rounded-lg mt-2 font-montserrat text-md"
         >
           Se connecter
         </button>
-        <Link to="/login" className="text-sm text-darkgrey text-center">
+        <Link
+          to="/login"
+          className="text-sm text-darkgrey text-center font-montserrat text-brown"
+        >
           Déjà un compte?
         </Link>
       </form>
